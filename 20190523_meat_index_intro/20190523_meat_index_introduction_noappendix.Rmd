@@ -30,8 +30,8 @@ In der Praxis ist die Selektion^[Selektion hier bedeutet, dass in einer bestimmt
 2. Bei der Selektion nach nur einem Merkmal verändern sich alle anderen Merkmale aufgrund von korrelierten Selektionserfolgen. Da sich sowieso alle Merkmale ändern, macht es Sinn die Selektion auf alle Merkmale auszudehnen, denn nur so lässt sich auch die Richtung der Veränderung aktiv bestimmen. 
 
 
-## Korrelierte Selektionserfolge^[Der korrelierte Selektionserfolg in einem Merkmal $Y$ bei der Selektion auf ein anderes Merkmal $X$ ist abhängig von der Selektionsintensität, den Heritabilitäten der beiden Merkmale $X$ und $Y$, der genetischen Korrelation zwischen den Merkmalen $X$ und $Y$ und der phänotypischen Standardabweichung des Merkmals $Y$.]
-Wie es der Begriff `korrelierte Selektionserfolge` schon sagt entstehen diese aufgrund von Korrelationen zwischen den Merkmalen. Die genetischen Korrelationen zwischen den Schlachtmerkmalen sind in der folgenden Tabelle gegeben.
+## Korrelierte Selektionserfolge
+Wie es der Begriff `korrelierte Selektionserfolge`^[Der korrelierte Selektionserfolg in einem Merkmal $Y$ bei der Selektion auf ein anderes Merkmal $X$ ist abhängig von der Selektionsintensität, den Heritabilitäten der beiden Merkmale $X$ und $Y$, der genetischen Korrelation zwischen den Merkmalen $X$ und $Y$ und der phänotypischen Standardabweichung des Merkmals $Y$.] schon sagt entstehen diese aufgrund von Korrelationen zwischen den Merkmalen. Die genetischen Korrelationen zwischen den Schlachtmerkmalen sind in der folgenden Tabelle gegeben.
 
 
 ```{r CorTable, echo=FALSE}
@@ -45,25 +45,27 @@ knitr::kable(tbl_cor,
 ```
 
 
-
 ## Indexselektion
-**Indexselektion** ist die optimale Methode um Tiere aufgrund von mehreren Merkmalen gleichzeitig zu selektieren^[*Tandemselektion* und *Selektion nach unabhängigen Selektionsgrenzen* sind zwei andere Methoden zur Selektion nach mehreren Merkmalen. Diese beiden Methoden erreichen aber nicht die gleiche Performance, wie Indexselektion.]. 
+**Indexselektion** ist die optimale Methode um Tiere aufgrund von mehreren Merkmalen gleichzeitig zu selektieren. 
 
-Die Indexselektion basiert auf dem Selektionsindex, welcher ein für alle Tiere berechnetes Selektionskriterium darstellt. Der Selektionsindex entspricht einem gewichteten Mittel der geschätzten Zuchtwerte. Die Gewichtungsfaktoren können auf verschiedene Arten hergeleitet werden. 
+Die Indexselektion basiert auf dem Selektionsindex, welcher ein für alle Tiere berechnetes Selektionskriterium darstellt. Der Selektionsindex entspricht einem gewichteten Mittelwert der geschätzten Zuchtwerte. Die Gewichtungsfaktoren können auf verschiedene Arten hergeleitet werden. 
 
 1. __Desired Gains__: Gewichtungsfaktoren werden aufgrund von vorgegebenen Selektionsfortschritten berechnet.
 2. __Wirtschaftliche Gewichte__: Gewichtungsfaktoren entsprechen der Veränderung des Gewinns bei einer Veränderung des Merkmals. Damit werden die Merkmale stark gewichtet, welche eine hohe wirtschaftliche Bedeutung haben. Mit wirtschaftlicher Bedeutung ist hier die Sensitivität des Gewinns auf Veränderungen im Merkmal gemeint. 
 
 
+# Wirtschaftliche Gewichtung
+Wie schon erwähnt, hängt das wirtschaftliche Gewicht eines Merkmals von der Sensitivität des Gewinns bei einer Änderung des Populationsmittels des Merkmals ab. Dies bedingt, dass wir den Gewinn der Schlachtkörperproduktion in Abhängigkeit der Populationsmittel der berücksichtigten Merkmale berechnen können. Diese Berechnung wird anhand eines Produktionsmodells gemacht. In einem Produktionsmodell werden die Kosten und die Erlöse in einem Produktionsbetrieb einander gegenübergestellt. Daraus resultiert der Gewinn aufgrund der verwendeten Populationsmittelwerte in den berücksichtigten Merkmalen. Bei der Änderung eines Populationsmittelwertes wird der resultiertende Gewinn des Produktionsbetriebs ändern. Diese Änderung des Gewinns entspricht dem wirtschaftlichen Gewicht des veränderten Merkmals.
+
+
+
 # Terminologie zum Begriff **Schlachtgewicht**
 Seit der Umstellung der Zuchtwertschätzung der Fleischleistungsmerkmale der Begriff **Schlachtgewicht** hat zwei unterschiedliche Bedeutungen erhalten. Diese Bedeutungen sind
 
-1. das **absolute** Schlachtgewicht. Dies entspricht dem Gewicht des Schlachtkörpers, welches im Schlachthof gewogen wird. Das absolute Schlachtgewicht ist eine Managementgrösse, das heisst diese kann über den Schlachtzeitpunkt gesteuert werden.
-2. das um das **Alter korrigierte** Schlachtgewicht. Diese Bedeutung entspricht der Definition des Merkmals in der Zuchtwertschätzung. Zwei Tiere mit dem gleichen absoluten Schlachtgewicht am Schachthof mit unterschiedlichem Alter, dann hat das jüngere Tier einen höheren Wert für das um das Alter korrigierte Schlachtgewicht. Somit ist dieses Merkmal ein Mass für die Wachstumsgeschwindigkeit. 
+1. das **absolute** Schlachtgewicht^[Dies entspricht dem Gewicht des Schlachtkörpers, welches im Schlachthof gewogen wird. Das absolute Schlachtgewicht ist eine Managementgrösse, das heisst diese kann über den Schlachtzeitpunkt gesteuert werden.]. 
+2. das um das **Alter korrigierte** Schlachtgewicht^[Diese Bedeutung entspricht der Definition des Merkmals in der Zuchtwertschätzung. Zwei Tiere mit dem gleichen absoluten Schlachtgewicht am Schachthof mit unterschiedlichem Alter, dann hat das jüngere Tier einen höheren Wert für das um das Alter korrigierte Schlachtgewicht. Somit ist dieses Merkmal ein Mass für die Wachstumsgeschwindigkeit.].
 
-Für die Zuchtwertschätzung ist die zweite Bedeutung relevant. 
-
-
+Für die Zuchtwertschätzung ist die zweite Bedeutung relevant. Als Beobachtung wird das absolute Schlachtgewicht verwendet. Die Alterskorrektur kommt über das Alter als Kovariable in das Modell. Der geschätzte Zuchtwert entspricht dem genetischen Potential für das Merkmal `um das Alter korrigiertes Schlachtgewicht`. Bei zwei Tieren mit dem gleichen absoluten Schlachtgewicht hat das jüngere Tier den höheren Zuchtwert für das Merkmale `um das Alter korrigiertes Schlachtgewicht`. 
 
 
 
