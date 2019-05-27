@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.9.4)  24 MAY 2019 13:46
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.9.4)  24 MAY 2019 14:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1045,31 +1045,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 127--127
 [1
 
 ]
-No file 20190524_meat_index_introduction_noappendix.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 168.
 *************************************************
 * fontspec warning: "addfontfeatures-ignored"
 * 
-* \addfontfeature(s) ignored on line 168; it cannot be used with a font that
+* \addfontfeature(s) ignored on line 207; it cannot be used with a font that
 * wasn't selected by a fontspec command.
 *  
 *  The current font is "\TU/lmr/m/n/10 ".
 *   The requested feature is "LetterSpace=10". 
 *************************************************
 [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 168.
+No file 20190524_meat_index_introduction_noappendix.bbl.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 212.
+*************************************************
+* fontspec warning: "addfontfeatures-ignored"
+* 
+* \addfontfeature(s) ignored on line 212; it cannot be used with a font that
+* wasn't selected by a fontspec command.
+*  
+*  The current font is "\TU/lmr/m/n/10 ".
+*   The requested feature is "LetterSpace=10". 
+*************************************************
+[3]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 212.
 (./20190524_meat_index_introduction_noappendix.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 168.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 168.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 168.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 212.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 212.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 212.
  ) 
 Here is how much of TeX's memory you used:
- 21471 strings out of 493005
- 386825 string characters out of 6134597
- 493179 words of memory out of 5000000
- 25184 multiletter control sequences out of 15000+600000
+ 21476 strings out of 493005
+ 386962 string characters out of 6134597
+ 494531 words of memory out of 5000000
+ 25189 multiletter control sequences out of 15000+600000
  10878 words of font info for 57 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 51i,11n,45p,10438b,405s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 51i,11n,45p,10438b,428s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 20190524_meat_index_introduction_noappendix.pdf (2 pages).
+Output written on 20190524_meat_index_introduction_noappendix.pdf (3 pages).
