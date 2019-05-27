@@ -4,10 +4,10 @@ subtitle: "Eine erklärende Einleitung"
 author: "Sophie Kunz und Peter von Rohr"
 date: "`r Sys.Date()`"
 output:
+  tufte::tufte_html: default
   tufte::tufte_handout:
     citation_package: natbib
     latex_engine: xelatex
-  tufte::tufte_html: default
   tufte::tufte_book:
     citation_package: natbib
     latex_engine: xelatex

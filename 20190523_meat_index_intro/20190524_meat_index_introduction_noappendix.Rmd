@@ -1,0 +1,67 @@
+---
+title: "Selektion bei Schlachtmerkmalen"
+subtitle: "Eine erklärende Einleitung"
+author: "Sophie Kunz und Peter von Rohr"
+date: "`r Sys.Date()`"
+output:
+  tufte::tufte_handout:
+    citation_package: natbib
+    latex_engine: xelatex
+  tufte::tufte_html: default
+  tufte::tufte_book:
+    citation_package: natbib
+    latex_engine: xelatex
+bibliography: skeleton.bib
+link-citations: yes
+---
+
+```{r setup, include=FALSE}
+library(tufte)
+# invalidate cache when the tufte version changes
+knitr::opts_chunk$set(tidy = FALSE, cache.extra = packageVersion('tufte'))
+options(htmltools.dir.version = FALSE)
+```
+
+
+# Mehrere Merkmale versus ein einzelnes Merkmal
+In der Praxis ist die Selektion^[Selektion hier bedeutet, dass in einer bestimmte Nutztierpopulation die "besten" Tiere als Elterntiere für die nächste Generation ausgewählt werden. Damit diese Auswahl einfach und effizient umgesetzt werden kann braucht es idealerweise pro Tier ein Selektionskriterium welches meist in Form von einer Zahl vorliegt. Alle Tiere in der Population werden dann nach dem Selektionskriterium rangiert und die Tiere an der Spitze der Rangliste werden als Elterntiere ausgewählt.] nach einem Merkmal kaum realistisch und es werden immer mehrere Merkmale bei der Selektion der Elterntiere der nachkommenden Generation berücksichtigt. Dies geschieht zum Beispiel bei den Fleischrindern aus den folgenden Gründen :
+
+1. Das Bezahlungssystem im Schlachthof berücksichtigt die Merkmale Schlachtgewicht, Fleischigkeitsklassen und Fettabdeckungsklassen. Somit ist es schon rein aus wirtschaftlichen Überlegungen nicht sinnvoll nur eines der Merkmale verbessern zu wollen und die anderen zu ignorieren.
+2. Bei der Selektion nach nur einem Merkmal verändern sich alle anderen Merkmale aufgrund von korrelierten Selektionserfolgen. Da sich sowieso alle Merkmale ändern, macht es Sinn die Selektion auf alle Merkmale auszudehnen, denn nur so lässt sich auch die Richtung der Veränderung aktiv bestimmen. 
+
+
+## Korrelierte Selektionserfolge^[Der korrelierte Selektionserfolg in einem Merkmal $Y$ bei der Selektion auf ein anderes Merkmal $X$ ist abhängig von der Selektionsintensität, den Heritabilitäten der beiden Merkmale $X$ und $Y$, der genetischen Korrelation zwischen den Merkmalen $X$ und $Y$ und der phänotypischen Standardabweichung des Merkmals $Y$.]
+Korrelierte Selektionserfolge entstehen aufgrund von Korrelationen zwischen den Merkmalen. Die genetischen Korrelationen zwischen den Schlachtmerkmalen beispielweise für Banktiere sind in der folgenden Tabelle gegeben.
+
+
+```{r CorTable, echo=FALSE}
+tbl_cor <- tibble::tibble(`Merkmal 1` = c(rep("F",2), "FET"),
+                          `Merkmal 2` = c("FET", "SG", "SG"),
+                          `Genetische Korrelation` = c(0.15, 0.38, 0.26))
+knitr::kable(tbl_cor,
+             booktabs = TRUE,
+             longtable = TRUE,
+             caption = "Genetische Korrelationen zwischen den Schlachtmerkmalen")
+```
+
+
+## Indexselektion
+Wir empfehlen die Indexselektion für die Selektion aufgrund mehrerer Merkmal. Die Indexselektion basiert auf einem Index, welcher ein für alle Tiere berechnetes Selektionskriterium darstellt. Der Index entspricht einem gewichteten Hilfsmittel der Zuchtwerte. Die Gewichtungsfaktoren können auf verschiedene Arten hergeleitet werden. 
+
+1. __Desired Gains__: Gewichtungsfaktoren werden aufgrund von vorgegebenen Selektionsfortschritten berechnet.
+2. __Wirtschaftliche Gewichte__: Gewichtungsfaktoren entsprechen der Veränderung des Gewinns bei einer Veränderung des Merkmals. Damit werden die Merkmale stark gewichtet, welche eine hohe wirtschaftliche Bedeutung haben. Mit wirtschaftlicher Bedeutung ist hier die Sensitivität des Gewinns auf Veränderungen im Merkmal gemeint. 
+
+# Klarheit rund um Schlachtgewicht
+Einen grossen Anteil der künstliche Besamung auf Milchvieh ist mit Fleischrinderstiere annerkannt von Mutterkuh Schweiz. KBO's legen Wert auf das genetisches Fleischleistungspotential von diesen Fleischrinderstiere, damit ihre Kunden zufrieden sind. Neben der Herdebuchführung sichert Mutterkuh Schweiz Absatkanäle für die Mutterkuh Halter und hat Einfluss auf den Fleischrindermarkt. Aus diesem Grund kann einen Begriff in verschiedene Kontexten nicht die gleiche Bedeutung haben.
+
+Die Überwachung von Fleischrindermarkt über das Schlachtgewicht (hier ist Phänotyp Schlachtgewicht gemeint) ist als Managementsgrösse zu betrachten. Angebot und Nachfrage auf dem Fleischrindermarkt wird anhand des Bezahlungssystem von Proviande gerichtet. Das Phänotyp Schlachtgewicht und das Bezahlungssystem helfen hilfreiche züchterische Instrumente zu herstellen.
+
+## Phänotyp Schlachtgewicht
+Vor der Kühlung wird das Schlachtgewicht des Tieres in Kilogramm gemessen.
+
+## Zuchtwert Schlachtgewicht
+Mit dem Phänotyp erhoben am Schlachthof und das ausgewählte Modell für die Zuchtwertschätzung, wird ein Zuchtwert Schlachtgewicht gerechnet. Verschiedene Umwelteffekte wie das Geschlecht, das Schlachthof, der Betrieb und Jahr wo ein Tier ausgemästet wurde und das Alter haben einen Einfluss aufs Schlachtgewicht. Tiere, welche ein schnelles Wachstum vererben, werden eine höheres Zuchtwert für Schlachtgewicht haben.
+
+## Ökonomisches Gewicht Schlachtgewicht
+Für die Indexselektion braucht es Gewichtungsfaktor für Schlachtgewicht. Wir empfehlen die Gewichtungsfaktoren basierend auf die wirtschaftliche Gewichte. Um die Sensitivität des Gewinns auf Veränderungen im Schlachtgewicht zu messen, kann man es via ein Produktionsmodell berechnen. In dem sowohl die Erlös-Seite mit dem Bezahlungssystem als auch die Kosten-Seite wie Stallplatz, Fütterung berücksichtigt wird. Das Gewichtungsfaktor und der Zuchtwert bauen den Index auf.
+
