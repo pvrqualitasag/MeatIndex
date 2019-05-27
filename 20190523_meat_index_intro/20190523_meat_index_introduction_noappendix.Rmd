@@ -1,5 +1,5 @@
 ---
-title: "Selektion bei Schlachtkörpermerkmalen"
+title: "Selektion bei Schlachtmerkmalen"
 subtitle: "Eine erklärende Einleitung"
 author: "Sophie Kunz und Peter von Rohr"
 date: "`r Sys.Date()`"
@@ -31,7 +31,7 @@ In der Praxis ist die Selektion^[Selektion hier bedeutet, dass in einer bestimmt
 
 
 ## Korrelierte Selektionserfolge^[Der korrelierte Selektionserfolg in einem Merkmal $Y$ bei der Selektion auf ein anderes Merkmal $X$ ist abhängig von der Selektionsintensität, den Heritabilitäten der beiden Merkmale $X$ und $Y$, der genetischen Korrelation zwischen den Merkmalen $X$ und $Y$ und der phänotypischen Standardabweichung des Merkmals $Y$.]
-Wie es der Begriff `korrelierte Selektionserfolge` schon sagt entstehen diese aufgrund von Korrelationen zwischen den Merkmalen. Die genetischen Korrelationen zwischen den Schlachtkörpermerkmalen sind in der folgenden Tabelle gegeben.
+Wie es der Begriff `korrelierte Selektionserfolge` schon sagt entstehen diese aufgrund von Korrelationen zwischen den Merkmalen. Die genetischen Korrelationen zwischen den Schlachtmerkmalen sind in der folgenden Tabelle gegeben.
 
 
 ```{r CorTable, echo=FALSE}
@@ -41,7 +41,7 @@ tbl_cor <- tibble::tibble(`Merkmal 1` = c(rep("CC",2), "CF"),
 knitr::kable(tbl_cor,
              booktabs = TRUE,
              longtable = TRUE,
-             caption = "Genetische Korrelationen zwischen den Schlachtkörpermerkmalen")
+             caption = "Genetische Korrelationen zwischen den Schlachtmerkmalen")
 ```
 
 
