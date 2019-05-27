@@ -45,25 +45,25 @@ knitr::kable(tbl_cor,
 ```
 
 
-# Arten der Mehrmerkmalsselektion
-Selektion aufgrund mehrerer Merkmal kann grundsätzlich auf die folgenden drei verschiedene Arten gemacht werden. 
-
-1. Tandemselektion
-2. Selektion nach unabhängigen Selektionsgrenzen
-3. Indexselektion (Selektion nach abhängigen Selektionsgrenzen)
-
-
-## Tandemselektion^[Diese Methode ist unrealistisch und wird so nirgends verwendet. Falls nach einem bestimmten Merkmal selektiert wird, werden in allen anderen Merkmalen nur korrelierte Selektionserfolge erzielt.]
-Bei der Tandemselektion werden die Merkmale in einer zeitlichen Abfolge nacheinander für die Selektion berücksichtigt. Es wird ein Merkmal ausgewählt nach welchem die Tiere in der Population ausgewählt werden. Alle anderen Merkmale werden nicht berücksichtigt. Sobald nach ein paar Generationen im ausgewählten Merkmal eine vorher definierte Grenze erreicht worden ist,  wird das nächste Merkmal zur Selektion ausgewählt. 
-
-
-## Selektion nach unabhängigen Grenzen
-Bei der Selektion nach unabhängigen Grenzen werden für alle Merkmale unabhängige Grenzen festgelegt und dann werden nur die Tiere als Eltern selektiert, welche in allen Merkmalen über der Selektionsgrenze liegen. Der Vorteil dieser Methode ist, dass sie einfach anzuwenden ist, und dass von Beginn an in allen Merkmalen ein Selektionsfortschritt erzielt wird. Das Problem ist aber, dass die genetischen Beziehungen zwischen den Merkmalen nicht berücksichtigt werden. In dieser Methode werden keine wirtschaftlichen Überlegungen berücksichtigt. Tendenziell wird mit dieser Methode in den Merkmalen mit hoher Heritabilität ein grosser Selektionsfortschritt erzielt. Sobald nach drei oder mehr Merkmalen mit unabhängigen Grenzen selektiert wird, so verringert sich die Anzahl der selektierten Eltern sehr stark auch wenn in jedem Einzelmerkmal nur mit geringer Intensität selektiert wird. Dieser Effekt verstärkt sich, wenn die Merkmale negativ korreliert sind.
-
 
 ## Indexselektion
+**Indexselektion** ist die optimale Methode um Tiere aufgrund von mehreren Merkmalen gleichzeitig zu selektieren^[*Tandemselektion* und *Selektion nach unabhängigen Selektionsgrenzen* sind zwei andere Methoden zur Selektion nach mehreren Merkmalen. Diese beiden Methoden erreichen aber nicht die gleiche Performance, wie Indexselektion.]. 
+
 Die Indexselektion basiert auf dem Selektionsindex, welcher ein für alle Tiere berechnetes Selektionskriterium darstellt. Der Selektionsindex entspricht einem gewichteten Mittel der geschätzten Zuchtwerte. Die Gewichtungsfaktoren können auf verschiedene Arten hergeleitet werden. 
 
 1. __Desired Gains__: Gewichtungsfaktoren werden aufgrund von vorgegebenen Selektionsfortschritten berechnet.
 2. __Wirtschaftliche Gewichte__: Gewichtungsfaktoren entsprechen der Veränderung des Gewinns bei einer Veränderung des Merkmals. Damit werden die Merkmale stark gewichtet, welche eine hohe wirtschaftliche Bedeutung haben. Mit wirtschaftlicher Bedeutung ist hier die Sensitivität des Gewinns auf Veränderungen im Merkmal gemeint. 
+
+
+# Terminologie zum Begriff **Schlachtgewicht**
+Seit der Umstellung der Zuchtwertschätzung der Fleischleistungsmerkmale der Begriff **Schlachtgewicht** hat zwei unterschiedliche Bedeutungen erhalten. Diese Bedeutungen sind
+
+1. das **absolute** Schlachtgewicht. Dies entspricht dem Gewicht des Schlachtkörpers, welches im Schlachthof gewogen wird. Das absolute Schlachtgewicht ist eine Managementgrösse, das heisst diese kann über den Schlachtzeitpunkt gesteuert werden.
+2. das um das **Alter korrigierte** Schlachtgewicht. Diese Bedeutung entspricht der Definition des Merkmals in der Zuchtwertschätzung. Zwei Tiere mit dem gleichen absoluten Schlachtgewicht am Schachthof mit unterschiedlichem Alter, dann hat das jüngere Tier einen höheren Wert für das um das Alter korrigierte Schlachtgewicht. Somit ist dieses Merkmal ein Mass für die Wachstumsgeschwindigkeit. 
+
+Für die Zuchtwertschätzung ist die zweite Bedeutung relevant. 
+
+
+
+
 
