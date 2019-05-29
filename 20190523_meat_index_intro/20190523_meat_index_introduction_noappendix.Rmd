@@ -48,7 +48,7 @@ knitr::kable(tbl_cor,
 ## Indexselektion
 **Indexselektion** ist die optimale Methode um Tiere aufgrund von mehreren Merkmalen gleichzeitig zu selektieren. 
 
-Die Indexselektion basiert auf dem Selektionsindex, welcher ein für alle Tiere berechnetes Selektionskriterium darstellt. Der Selektionsindex entspricht einem gewichteten Mittelwert der geschätzten Zuchtwerte. Die Gewichtungsfaktoren können auf verschiedene Arten hergeleitet werden. 
+Die Indexselektion basiert auf dem Selektionsindex, welcher ein für alle Tiere berechnetes Selektionskriterium darstellt. Der Selektionsindex entspricht einer gewichteten Summe der geschätzten Zuchtwerte. Die Gewichtungsfaktoren können auf verschiedene Arten hergeleitet werden. 
 
 1. __Desired Gains__: Gewichtungsfaktoren werden aufgrund von vorgegebenen Selektionsfortschritten berechnet.
 2. __Wirtschaftliche Gewichte__: Gewichtungsfaktoren entsprechen der Veränderung des Gewinns bei einer Veränderung des Merkmals. Damit werden die Merkmale stark gewichtet, welche eine hohe wirtschaftliche Bedeutung haben. Mit wirtschaftlicher Bedeutung ist hier die Sensitivität des Gewinns auf Veränderungen im Merkmal gemeint. 
