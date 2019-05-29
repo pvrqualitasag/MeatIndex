@@ -1,0 +1,57 @@
+---
+title: "Fleischindex"
+author: "Sophie Kunz und Peter von Rohr"
+date: "29.05.2019"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Mehrere Merkmale versus Einzelmerkmal
+
+Selektion aufgrund mehreren Merkmalen, da 
+
+* Bezahlungssystem mehrere Merkmale enthält
+* auch bei Selektion nach nur einem Mermale andere Merkmale aufgrund von Korrelationen ändern
+
+$\rightarrow$ korrelierte Selektionserfolge
+
+
+## Indexselektion
+
+* Optimale Methode für gleichzeitige Selektion nach mehreren Merkmalen 
+
+$\rightarrow$ Indexselektion
+
+* Selektionsindex $=$ ein Wert für jedes Tier, welcher als Selektionskriterium verwendet wird
+* Selektionsindex berechnet sich als gewichtete Summe über die geschätzten Zuchtwerte
+* Bestimmung der Gewichtungsfaktoren
+    1. Vorgegebene Selektionsfortschritte in Merkmalen (desired gains)
+    2. Wirtschaftliche Gewichte $=$ Veränderung des Gewinns bei Veränderung eines Merkmals
+
+
+## Wirtschaftliche Gewichtung
+
+* Vereinfachte Betrachtung
+* Gewinn $=$ Erlös - Kosten
+* Für Fleischigkeit und Fettabdeckung ist wirtschaftliches Gewicht nur vom Erlös abhängig
+* Spezialfall: um das Alter korriertes Schlachtgewicht
+
+
+## Terminologie
+
+**Absolutes Schlachtgewicht**
+
+* Gewicht des Schlachtkörpers im Schlachthof
+* abhängig vom Schlachtzeitpunkt
+
+
+**Alter korrigiertes Schlachtgewicht**
+
+* verwendet in Zuchtwertschätzung
+* zwei Tiere mit gleichem absolutem Schlachtgewicht und unterschiedlichem Alter
+
+$\rightarrow$ jüngeres Tier hat höheren Wert für das Merkmal **Alter korrigiertes Schlachtgewicht**
+
