@@ -1,0 +1,202 @@
+---
+title: "Protokoll"
+author: "Peter von Rohr"
+date: "5/29/2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+## Anwesende
+
+* Urs Vogt
+* Svenja Strasser
+* Matthias Gerber
+
+
+## Begrüssung
+
+SKN begrüsst zur Sitzung. Protokoll der letzen Sitzung erwähnt
+
+* Status: BVCH passt den Fleischwert an. SHB wartet ab.
+* Ziel: Unklarheiten zu bereinigen
+
+
+## Information zum Fleischindex
+
+
+## Fragen
+Wichtig ist die Klärung der offenen Fragen. Von Qualitas wollen wir nichts entwickeln, was von VMS 
+
+(MG) Es ist klar, wie Index erstellt. Weshalb wird nicht der Weg von BVCH gewählt. 
+
+(SKN) Wir verwenden den einfach
+
+
+Fragen 
+
+
+Kann Bezahlungssystem mit starken Änderung umgehen?
+
+Falls Bezahlungssystem ändert, werden dann Gewichte angepasst? Bezahlungssystem wird 
+
+
+Frage: Ist das ein System mit dem Produktionsmodell oder 
+
+
+Guter Weg, falls in unter einem Jahr realisiert werden.
+
+---
+
+Anzahl Nutzungsrichtungen und Anzahl Indices in Abhängigkeit der Verschiedenheit der Resultate.
+
+
+Unterschiede nach Rassen sind sicher nötig.
+
+
+---
+
+(SVS) Grundsätzliche Frage ist, soll Index kommen ja oder nein. Dienstleistung an Kunden. Aktuell sind nur einzelne Zuchtwerte wertvoll. Einzelne Zuchtwerte werden bleiben und können weiter abgerufen werden. Was Milchverbände machen ist nicht wichtig. Ökonomische Gewichtung wird sicher den Kunden am besten gerecht.
+
+---
+
+(MG) Berechnungen müssen zeigen, ob es ein Index-Mutterkuh gibt. Im Mastkälberbereich sind SI und OB mit gleichen Anforderungen unterwegs. 
+
+
+---
+
+(SKN) Ist die Frage schon entschieden, ob Index ja oder nein.
+
+(MG) Rassenclubs der ZW-Schätzungsrassen müssen darüber entscheiden. 
+
+(AF) Vereinheitlichung der Schlachtkörper sind sicher gut
+
+(MG) Käuferpreise sind sicher beeinflusst durch monetäre Bewertung
+
+(AF) Veränderungen in Populationen werden 
+
+---
+
+Umsetzungsplan
+
+* Absetzgewicht: 1. Semester 2019
+* Geburtsverlauf: 07/2019 - 06/2020
+* DAGE: 07/2020 - 06/2021
+* GZW: ab 07/2021
+
+Trennung Reproduktion und Fleischleistung
+
+---
+
+Reproduktion: GAL und AbG maternal
+
+Gezielt
+
+---
+
+Entscheidung an der HB-Kommissionsitzung (12.09.2019) mit Produktionsmodell und ersten Ergebnissen. Leute müssen überzeugt werden. 
+
+Zusammenarbeit mit OB und SI anstreben, deshalb möglichst früh eine Einführung anstreben.
+
+---
+
+SVS Qualität vor Geschwindigkeit
+
+---
+
+Idee ist gut, Kunden warten darauf. Fahrplan muss überprüft werden. Bisherige Beschlüsse sollen nicht
+
+---
+
+Ziel: Vorstellung am 11.09.2019 Resultate des Produktionsmodells für ZWS-Rassen. Dann Information. Beschluss im November
+
+1. Stand ZWS
+2. Stand Genomik LM
+3. GA
+4. Information Interbeef
+5. Projekt Indexierung
+
+---
+
+Definition des Produktionsmodells
+
+--- 
+
+14.06.2019: FA-ASR Sitzung vorstellen, was das Ziel ist. 
+
+- Einführung des Index Sommer 2020
+- HB-Kommission wird sich der Entscheidung nicht entgegenstellen
+- Frühzeitige Information an Swissgenetics nicht vergessen
+
+---
+
+Zusammenarbeit mit Milchvieh ZO, welches Gefäss oder Gremium
+
+- Frage, ob AG ZTDL das richtige Gremium ist
+- Soll separates Gremium geschaffen werden
+- FA berät gewisse Sachen
+- Leute im Anschluss des FA-ASR oder AG ZTDL. Da nicht alle Leute vorhanden sind ==> Bildung eines Untergremiums im Bereich Fleisch. Auch Leute der Rassenclubs miteinbeziehen. 
+
+Zusammensetzung paritätisch nach bvch, shb, vms, qualitas, rassenclubs, swissgenetics, select star
+
+Sitzung im Oktober 2019 mit dem Zweck der Informationsverbreitung.
+
+---
+
+Fragen der Anerkennung sollte auf Index abgestellt werden und nicht mehr basierend auf Einzelzuchtwerte. 
+
+---
+
+Unterschiede zwischen Stiere mit Geburtsbetrieb SHB oder Geburtsbetrieb VMS. Zur Klärung der Frage, ob auch Stiere aus Doppelnutzung anerkannt werden. Frage nach der Separation zwischen Nutzungsrichtungen. Bei AUT war der Plan, die Populationen zu trennen. Bei Trennung werden negative Effekte auftreten, wenn über Rassen hinweg Tiere ausgetauscht werden sollen.
+
+---
+
+Abrechnung Datenlieferung der ZWS. Daten für Geb.-Meldungen von Milchrassen bezahlt und Fleischdaten werden entschädigt. Historische Gründe, da VMS Bedarf an Geburtsmeldungen. Festlegung der Beträge aufgrund als spontaner Entscheid. 
+
+Bezug Geburtsmeldungen von BVCH und SHB bei der TVD wird sowieso gemacht. Anzahl Records können bestimmt werden. Verkauf von Zuchtwerten an von VMS and BV und SHB. 
+
+Zusammenstellung: 
+- Anzahl Geburtsmeldungen haben zahlenmässig nicht zugenommen
+- VMS liefert mehr Zuchtwerte and BV und shb. 
+- Abrechnung der Datenlieferung und Bezug aufheben, da Werte der Daten sich ungefähr aufwiegen
+
+
+Vereinbarung und Regelung müssen bestehen bleiben, im Bezug auf der Weiterverwendung der Zuchtwerte. Somit braucht es Zusammenarbeitsvereinbarung zwischen vms, bv und shb. Vereinbarung soll auf Stufe der ASR gemacht werden. Zusätzlich gibt es die Frage der Datenrechte. 
+
+Betreffend der Datenrechte ist es klar, dass Daten nur mit Einverständnis des Eigentümers weitergegeben wird. Umsetzung ist in Einzelfällen nicht konsequent. 
+
+Datenbezug von hos im Bereich vom Fleisch gibt es nicht mehr. Es ist fraglich, ob die Geburtsablaufsdaten von hos zusätzliche Informationen bringen werden.
+
+---
+
+Verschiedenes: 
+
+- Austausch der Information mit DE über IDEA für einen einzelnen Stier
+- Interbull-Platform
+- Beschluss der HB-Kommission, ob SNP-Informationen verfügbar sind oder nicht
+
+
+---
+
+Sitzung am Jahresende zum Stand der Projekte (im kleinen Rahmen Sept/Oktober, Information an HB-Kommission 13.11.2019)
+- GS LM
+- Einführung Genomik
+
+
+Termin: Freitag 18.10.2019 13:30 Uhr
+
+Thema und Beitrag am FA-ASR: 15.11.2019
+
+
+
+
+
+
+
+
+
+
