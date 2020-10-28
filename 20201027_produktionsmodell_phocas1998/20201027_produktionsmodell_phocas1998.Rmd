@@ -1,0 +1,61 @@
+---
+title: "Produktionsmodell für die Schweizer Fleischrinderzucht"
+subtitle: ""
+author: "Peter von Rohr"
+date: "`r Sys.Date()`"
+output: 
+  bookdown::pdf_document2:
+    toc: false
+bibliography: skeleton.bib
+link-citations: yes
+---
+
+```{r setup, include=FALSE}
+# invalidate cache when the tufte version changes
+knitr::opts_chunk$set(tidy = FALSE, cache.extra = packageVersion('tufte'))
+options(htmltools.dir.version = FALSE)
+s_bib_fn <- 'skeleton.bib'
+if (!fs::file_exists(s_bib_fn)) fs::file_create(s_bib_fn)
+met <- rmdhelp::MendeleyExportToolR6$new(
+  ps_local_bib_file = s_bib_fn,
+  ps_this_rmd_file  = ifelse(rstudioapi::isAvailable(),
+    rstudioapi::getActiveDocumentContext()$path, rprojroot::thisfile()))
+# rmdhelp::show_knit_hook_call()
+knitr::knit_hooks$set(hook_convert_odg = rmdhelp::hook_convert_odg)
+```
+
+# Erklärung
+Dieses Dokument fasst die Arbeit von `r met$add('Phocas1998')` zusammen. 
+
+
+# Hintergrund
+Die Selektion von potentiellen Elterntieren aufgrund von mehreren Merkmalen ist nur mit einem Gesamtzuchtwert effizient umsetzbar. In einem Gesamtzuchtwert werden die die Zuchtwerte der einzelnen Merkmale aufgrund ihrer wirtschaftlichen Bedeutung gewichtet. Die wirtschaftliche Bedeutung eines Merkmals wird aufgrund der Veränderung des Gewinns in einem Produktionsbetrieb bei einer kleinen Änderung des Populationsmittelwertes des Merkmals. Der Gewinn eines Produktionsbetriebs wird mit einem Produktionsmodell simuliert. Eine mögliches Produktionsmodell für die Fleischrinderzucht wurde von `r met$add('Phocas1998')` vorgeschlagen.
+
+
+# Produktionsmodell
+Für die Entwicklung eines Zuchtziels müssen die drei folgenden Punkte berücksichtigt werden.
+
+1. Für jedes Produktionssystem müssen die charakteristischen Herdenmanagementparameter zusammengestellt werden. Diese Parameter bestehen aus biologischen  (Fruchtbarkeit, Wachstum, Futterverzehr, ...) und wirtschaftlichen (Preise, Kosten, Umsatz, Gewinn, ...) Grössen. Im Artikel von `r met$add('Phocas1998')` wurden fünf Produktionssysteme unterschieden: vier Monate alte Kälber für die Kalbfleischproduktion (i); acht Monate alte Kälber für den Weiterverkauf an Mastbetriebe (ii); Rinder und Bullen in drei verschiedenen Altersklassen (13 und 14 Monate, 19 und 16 Monate, 30 und 18 Monate)(iii-v). 
+
+2. Der Gewinn einer typischen Produktionsherde für ein bestimmtes Produktionssystem muss simuliert werden. Dies bedingt die Differenz zwischen Einnahmen und Ausgaben als eine Funktion der biologischen Parameter der Merkmale unter Selektion.
+
+3. Wirtschaftliche Gewichte sind als partielle Ableitungen der Gewinngleichungen nach dem Mittelwert des entsprechenden Merkmals
+
+Aufgrund der grossen Diversität der verschiedenen Produktionssysteme in Frankreich wurden die wirtschaftlichen Gewichte für jedes Produktionssystem separat ermittelt. Die wirtschaftlichen Gewichte pro Produktionssystem wurden dann anhand der Menge an geschlachteten Tiere in den jeweiligen Produktionssystem gewichtet. So resultierte eine einzigartige Gewichtung der verschiedenen Merkmale über alle Produktionssysteme für eine bestimmte Rasse.
+
+
+## Herdenmanagement
+Die benötigten Daten wurden aus einem Netzwerk von 100 Limousin-Betrieben, welche in unter einer Kontrolle / Beratung standen. Die wirtschaftlichen Parameter wurden für das Jahr 1994 verwendet. 
+
+
+### Merzung und Remontierung
+Die Altersstruktur der Herde ist in der folgenden Darstellung gezeigt.
+
+```{r demography-fig1, echo=FALSE, hook_convert_odg=TRUE, fig_path="odg"}
+#rmdhelp::use_odg_graphic(ps_path = 'odg/demography-fig1.odg')
+knitr::include_graphics(path = "odg/demography-fig1.png")
+```
+
+Die Anzahl der belegten Kühe pro Jahr wurde über die Zeit konstant gehalten. 
+
+# Literatur 
