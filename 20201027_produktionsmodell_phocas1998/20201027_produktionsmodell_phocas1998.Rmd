@@ -56,6 +56,25 @@ Die Altersstruktur der Herde ist in der folgenden Darstellung gezeigt.
 knitr::include_graphics(path = "odg/demography-fig1.png")
 ```
 
-Die Anzahl der belegten Kühe pro Jahr wurde über die Zeit konstant gehalten. 
+Die Anzahl der belegten Kühe pro Jahr wurde über die Zeit konstant gehalten. Die remontierten Rinder wurden von den Kühen ab der zweiten Laktation ausgewählt. Abgesehen von der Herdengrösse wurden alle anderen demographischen Parameter (Trächtigkeitsdauer, Nutzungsdauer und Remontierungsrate) für die verschiedenen Produktionssystem konstant gelassen. Die Verteilungen der Abkalbungen über die Zeit wurden beim Produktionssystem der Kälbermast als gleichverteilt angenommen. Für alle anderen Produktionssystem wurde angenommen, dass die Abkalbungen im Herbst und Winter stattfinden. Für die Kälbermastbetriebe wurde eine Herdengrösse von 30 Kühen angenommen. Die Herdengrössen aller anderen Betriebe wurde auf 50 Kühe gesetzt.
+
+
+### Gesundheit und Reproduktion
+Die folgende Tabelle gibt eine Übersicht über die verwendeten Zahlen zu den Abkalbungen. Diese sind aufgeteilt in die Geburtsablaufsklassen ('Keine Hilfe'  bis 'Kaiserschnitt'). Des weiteren werden die Rinderkalbungen ('1.L') von den Abkalbungen der Kühe ('2.L ff')
+
+```{r tbl-veal, echo=FALSE}
+tbl_veal <- tibble::tibble(Parameter                = c('Häufigkeit', 'Kälbersterblichkeit bis 48h', 'Abgangsrate', 'Kosten (FF) pro Abkalbung'),
+                           `Keine Hilfe (1.L)`      = c(0.82, 0.060, 0.050, 0),
+                           `Keine Hilfe (2.L ff)`   = c(0.92, 0.020, 0.147, 0),
+                           `Leichte Hilfe (1.L)`    = c(0.14, 0.070, 0.050, 30),
+                           `Leichte Hilfe (2.L ff)` = c(0.06, 0.022, 0.147, 30),
+                           `Schwere Hilfe (1.L)`    = c(0.03, 0.500, 0.500, 500),
+                           `Schwere Hilfe (2.L ff)` = c(0.015, 0.150, 0.500, 500),
+                           `Kaiserschnitt (1.L)`    = c(0.01, 0.600, 0.500, 1500),
+                           `Kaiserschnitt (2.L ff)` = c(0.005, 0.206, 0.500, 1500))
+knitr::kable(tbl_veal)
+```
+
+
 
 # Literatur 
