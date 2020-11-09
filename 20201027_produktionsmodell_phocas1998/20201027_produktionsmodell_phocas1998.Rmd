@@ -3,6 +3,10 @@ title: "Produktionsmodell für die Schweizer Fleischrinderzucht"
 subtitle: ""
 author: "Peter von Rohr"
 date: "`r Sys.Date()`"
+header-includes:
+  - \usepackage{pdflscape}
+  - \newcommand{\blandscape}{\begin{landscape}}
+  - \newcommand{\elandscape}{\end{landscape}}
 output: 
   bookdown::pdf_document2:
     toc: false
@@ -60,21 +64,79 @@ Die Anzahl der belegten Kühe pro Jahr wurde über die Zeit konstant gehalten. D
 
 
 ### Gesundheit und Reproduktion
-Die folgende Tabelle gibt eine Übersicht über die verwendeten Zahlen zu den Abkalbungen. Diese sind aufgeteilt in die Geburtsablaufsklassen ('Keine Hilfe'  bis 'Kaiserschnitt'). Des weiteren werden die Rinderkalbungen ('1.L') von den Abkalbungen der Kühe ('2.L ff')
+Die folgenden Tabellen geben eine Übersicht über die verwendeten Zahlen zu den Abkalbungen. Diese sind aufgeteilt in die Geburtsablaufsklassen ('Keine Hilfe'  bis 'Kaiserschnitt'). Des weiteren werden die Rinderkalbungen ('1.L') von den Abkalbungen der Kühe ('2.L ff')
 
 ```{r tbl-veal, echo=FALSE}
-tbl_veal <- tibble::tibble(Parameter                = c('Häufigkeit', 'Kälbersterblichkeit bis 48h', 'Abgangsrate', 'Kosten (FF) pro Abkalbung'),
+tbl_veal_kh <- tibble::tibble(Parameter                = c('Häufigkeit', 'Kälbersterblichkeit bis 48h', 'Abgangsrate', 'Kosten (FF) pro Abkalbung'),
                            `Keine Hilfe (1.L)`      = c(0.82, 0.060, 0.050, 0),
-                           `Keine Hilfe (2.L ff)`   = c(0.92, 0.020, 0.147, 0),
+                           `Keine Hilfe (2.L ff)`   = c(0.92, 0.020, 0.147, 0))
+tbl_veal_lh <- tibble::tibble(Parameter                = c('Häufigkeit', 'Kälbersterblichkeit bis 48h', 'Abgangsrate', 'Kosten (FF) pro Abkalbung'),
                            `Leichte Hilfe (1.L)`    = c(0.14, 0.070, 0.050, 30),
-                           `Leichte Hilfe (2.L ff)` = c(0.06, 0.022, 0.147, 30),
-                           `Schwere Hilfe (1.L)`    = c(0.03, 0.500, 0.500, 500),
-                           `Schwere Hilfe (2.L ff)` = c(0.015, 0.150, 0.500, 500),
+                           `Leichte Hilfe (2.L ff)` = c(0.06, 0.022, 0.147, 30))
+tbl_veal_sh <- tibble::tibble(Parameter                = c('Häufigkeit', 'Kälbersterblichkeit bis 48h', 'Abgangsrate', 'Kosten (FF) pro Abkalbung'),
+                             `Schwere Hilfe (1.L)`    = c(0.03, 0.500, 0.500, 500),
+                           `Schwere Hilfe (2.L ff)` = c(0.015, 0.150, 0.500, 500))
+tbl_veal_ks <- tibble::tibble(Parameter                = c('Häufigkeit', 'Kälbersterblichkeit bis 48h', 'Abgangsrate', 'Kosten (FF) pro Abkalbung'),
                            `Kaiserschnitt (1.L)`    = c(0.01, 0.600, 0.500, 1500),
                            `Kaiserschnitt (2.L ff)` = c(0.005, 0.206, 0.500, 1500))
-knitr::kable(tbl_veal)
+knitr::kable(tbl_veal_kh)
+knitr::kable(tbl_veal_lh)
+knitr::kable(tbl_veal_sh)
+knitr::kable(tbl_veal_ks)
 ```
 
+Weitere Kosten, welche durch Krankheiten verursacht werden sind in der folgenden Tabelle aufgelistet.
+
+```{r tbl-health, echo=FALSE}
+tbl_health_int <- tibble::tibble(Tierklasse = c("Kalb bis Alter 48h",
+                                            "Kalb zwischen 3Tg - 3 Mt",
+                                            "Kalb zwischen 4Mt - 8Mt",
+                                            "Jungbullen",
+                                            "Mastrinder",
+                                            "Remonten",
+                                            "Kühe"),
+                             `Häufigkeit von Interventionen` = c(15,
+                                                                 40,
+                                                                 15,
+                                                                 15,
+                                                                 15,
+                                                                 1,
+                                                                 1),
+                             `Kosten pro Intervention (FF)` = c(200,
+                                                                150,
+                                                                165,
+                                                                300,
+                                                                300,
+                                                                800,
+                                                                800)
+                             )
+tbl_health_sb <- tibble::tibble(Tierklasse = c("Kalb bis Alter 48h",
+                                            "Kalb zwischen 3Tg - 3 Mt",
+                                            "Kalb zwischen 4Mt - 8Mt",
+                                            "Jungbullen",
+                                            "Mastrinder",
+                                            "Remonten",
+                                            "Kühe"),
+                             `Systematische Behandlung (FF)` = c(0,
+                                                                 0,
+                                                                 25,
+                                                                 65,
+                                                                 65,
+                                                                 40,
+                                                                 70),
+                             `Andere Kosten (FF)` = c(0,
+                                                      20,
+                                                      20,
+                                                      "$3*0.35*D_1$",
+                                                      "$2*0.35*D_2$",
+                                                      170,
+                                                      250))
+knitr::kable(tbl_health_int)
+knitr::kable(tbl_health_sb, escape = FALSE)
+
+```
+
+wobei $D_1$ und $D_2$ die Mastdauer für Jungbullen und Mastrinder sind.
 
 
 # Literatur 
