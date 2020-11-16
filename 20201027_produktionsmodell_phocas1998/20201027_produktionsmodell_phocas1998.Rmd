@@ -139,4 +139,89 @@ knitr::kable(tbl_health_sb, escape = FALSE)
 wobei $D_1$ und $D_2$ die Mastdauer für Jungbullen und Mastrinder sind.
 
 
+Die Kosten (in FF) für die Besamungen/Belegungen sind in der folgenden Tabelle zusammengefasst. In der Kalbfleischproduktion werden ein Drittel der Kühe künstlich besamt. Alle anderen Kühe in allen anderen Produktionssystemen werden mit Natursprung belegt.
+
+```{r tbl-insem, echo=FALSE}
+tbl_insem <- tibble::tibble(Tierklasse = c('Rinder mit künstlicher Besamung',
+                                           'Kühe mit Natursprung'),
+                            Kosten = c(240, 210))
+knitr::kable(tbl_insem)
+```
+
+
+### Fütterung
+Die Futterkosten sind in der folgenden Tabelle aufgelistet.
+
+```{r tbl-feed, echo=FALSE}
+tbl_feed <- tibble::tibble(Futter = c('Heu',
+                                      'Gras',
+                                      'Maissilage',
+                                      'Triticale',
+                                      'Soyaölkuchen',
+                                      'Kälberkraftfutter',
+                                      'Milchpulver'),
+                           `Energiegehalt (UFL / kg DM)` = c(0.63, 0.85, 0.90, 1.21, 1.17, 1.00, 2.08),
+                           `Puffer (UEL / kg DM)` = c(1.16, 1.02, 1.13, '*', '*', '*', '*'),
+                           `Kosten in FF / kg DM` = c(0.21, 0.06, 0.34, 0.51, 1.70, 1.55, 10.42))
+knitr::kable(tbl_feed)
+```
+
+
+### Produktionsbedingungen
+Alter und Gewicht für die verschiedenen Produktionssysteme sind in der folgenden Tabelle gezeigt.
+
+```{r tbl-prod, echo=FALSE}
+tbl_prod_veal <- tibble::tibble(Parameter = c('Lebendgewicht (kg)', 'Schlachtgewicht (kg)', 'Alter (Tagen)'),
+                                Bullenkälber = c(197,130,135),
+                                Kuhkälber = c(182,120,135))
+tbl_prod_wean <- tibble::tibble(Parameter = c('Lebendgewicht (kg)', 'Alter (Tagen)'),
+                                `Männliche Absetzer` = c(305, 245),
+                                `Weibliche Absetzer` = c(260,245))
+tbl_prod_early <- tibble::tibble(Parameter = c('Lebendgewicht (kg)', 'Schlachtgewicht (kg)', 'Alter (Tagen)'),
+                                 `Bullen (früh)` = c(525, 320, 430),
+                                 `Rinder (früh)` = c(362, 210, 400))
+tbl_prod_classical <- tibble::tibble(Parameter = c('Lebendgewicht (kg)', 'Schlachtgewicht (kg)', 'Alter (Tagen)'),
+                                 `Bullen (klassisch)` = c(590, 360, 480),
+                                 `Rinder (klassisch)` = c(456, 260, 570))
+tbl_prod_late <- tibble::tibble(Parameter = c('Lebendgewicht (kg)', 'Schlachtgewicht (kg)', 'Alter (Tagen)'),
+                                 `Bullen (spät)` = c(656, 400, 530),
+                                 `Rinder (spät)` = c(544, 310, 760))
+
+knitr::kable(tbl_prod_veal)
+knitr::kable(tbl_prod_wean)
+knitr::kable(tbl_prod_early)
+knitr::kable(tbl_prod_classical)
+knitr::kable(tbl_prod_late)
+```
+
+
+## Modellierung des Gewinns
+Es wurde angenommen, dass 25 Merkmale den Gewinn eines Produktionssystems bestimmen. Diese Merkmale wurden in vier Gruppen unterteilt.
+
+1. **Reproduktionsmerkmale**
+    + Geburtsablauf (Score zwischen 1 - ohne Hilfe und 4 - Kaiserschnitt)
+    + Kalbeerfolg als Mass der Fruchtbarkeit der Mutter
+    + Aufzuchtverlust (bis 2 Tage;zwischen Tag 3 und 3 Monaten und zwischen 3 Monaten und 8 Monaten)
+    + Geburtsgewicht
+    + Absetzgewicht (direkt und maternal)
+2. **Schlachtleistungsmerkmale der Kuh**
+    + Zuwachs
+    + letzte Kalbung bis Abgang
+    + Ausschlachtungsgrad
+    + Fleischigkeitsklasse (EUROP)
+3. **Schlachtleistungsmerkmale beim Absetzen/Kalb**
+    + Alter beim Absetzen
+    + Ausschlachtungsgrad
+    + Fleischfarbe
+    + Fleischigkeitsklasse
+    + Muskelentwicklung
+4. **Schlachtleistungsmerkmale bei der Schlachtung**
+    + Zuwachs
+    + Länge der Vormastperiode
+    + Länge der Mastperiode
+    + Ausschlachtungsgrad
+    + Fettabdeckung
+    + Fleischigkeit
+    
+    
 # Literatur 
